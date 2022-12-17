@@ -1,0 +1,40 @@
+6.13
+void main()
+{
+  
+  final pizzaPrices = {
+  'margherita': 5.5,
+  'pepperoni': 7.5,
+  'vegetarian': 6.5,
+};
+    final order = ['margherita', 'vegetarian'];
+  Compare( pizzaPrices,order);
+  
+  
+}
+
+
+double Compare(Map<String,double> myMap,List myList)
+{
+  var value;
+  var idx;
+  var total=0.0;
+  var result;
+   
+  for(value in myMap.keys)
+  {
+    for(idx in myList)
+    {
+      if(idx==value)
+      {      
+        result = myMap[idx];
+        total+=result;
+               
+      }
+      
+    }
+    
+  }
+  print(total);
+  return 1;
+}
